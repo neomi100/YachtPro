@@ -1,0 +1,49 @@
+    .img-grid-container {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 165px 165px;
+        gap: 8px;
+        margin-bottom: 20px;
+        .yacht-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+         :first-child {
+            grid-column: 1/span 2;
+            grid-row: 1/span 2;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        >*:not(:first-child) {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .el-carousel {
+        margin-bottom: 25px;
+        .el-carousel__container {
+            height: 250px;
+        }
+        .el-carousel__arrow--right {
+            right: 8px;
+        }
+        .el-carousel__arrow--left {
+            left: 8px;
+        }
+        img {
+            object-fit: none;
+            width: 100%;
+            height: 100%;
+        }
+    }

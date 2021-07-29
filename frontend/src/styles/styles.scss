@@ -1,0 +1,44 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+// BASICS
+@import 'basics/base';
+@import 'basics/helpers';
+@import 'basics/layout';
+// CMPS
+@import 'cmps/app';
+@import 'cmps/app-header';
+@import 'cmps/app-footer';
+@import 'cmps/date-picker';
+@import 'cmps/img-grid-container';
+@import 'cmps/star-rating';
+@import 'cmps/yacht-reviews';
+@import 'cmps/trip-settings';
+@import 'cmps/slide-img';
+@import 'cmps/yacht-filter';
+@import 'cmps/yacht-list';
+@import 'cmps/yacht-preview';
+@import 'cmps/img-upload';
+@import 'cmps/trip-setting-mobail';
+@import 'cmps/user-dashboard';
+@import 'cmps/user-back-office';
+@import 'cmps/user-profile';
+@import 'cmps/owner-orders';
+@import 'cmps/owner-yachts';
+@import 'cmps/add-yacht-form';
+
+
+
+@import 'cmps/home-filter';
+@import 'cmps/single-yacht-order';
+
+//VIEWS
+@import 'cmps/app';
+@import 'views/home';
+@import 'views/yacht-details';
+@import 'views/user-details';
+@import 'views/become-owner';
+@import 'views/login';
+@import 'views/yacht-page';

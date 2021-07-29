@@ -1,0 +1,53 @@
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // margin: 0 10px;
+    // text-align: center;
+    .wrapper {
+        // position: relative;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $clr4;
+            margin-bottom: rem(10px);
+            padding: 10px 1rem;
+            height: 65px;
+            font-size: rem(16px);
+            .logo {
+                width: 200px;
+                object-fit: contain;
+            }
+            #nav {
+                color: $clr2;
+                a {
+                    font-weight: bold;
+                    color: $clr1;
+                    color: inherit;
+                    text-decoration: unset;
+                }
+                a.router-link-exact-active {
+                    color: $clr1;
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: $clr4;
+        color: $clr2;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: rem(25px);
+    }
+}
+
+.top{
+    .header-container{
+        background-color: transparent;
+    }
+    .logo{
+//change logo to white    
+    }
+}

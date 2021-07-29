@@ -1,0 +1,43 @@
+.main-footer {
+    display: flex;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 1px solid #DDDDDD;
+    justify-content: space-between;
+    background-color: rgb(236, 236, 236);
+    padding-left: 10px;
+    height: 3rem;
+    position: static;
+    bottom: 0;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.footer-lang {
+    font-weight: 550;
+    text-decoration: underline;
+    color: $clr7;
+}
+
+.social {
+    width: 100px;
+    justify-content: space-evenly;
+    fill: currentcolor;
+    color: $clr7;
+}
+
+.footer-money {
+    margin-left: 10px;
+}
+
+// .facebook {
+//     margin-left: 10px;
+// }
+// .instagram {
+//     margin-left: 5px;
+//     margin-right: 5px;
+//     padding-left: 10px;
+// }
+// .twitter {
+//     padding-right: 10px;
+// }
