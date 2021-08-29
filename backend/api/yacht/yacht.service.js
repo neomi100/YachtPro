@@ -9,6 +9,7 @@ async function query(filterBy = {}) {
     try {
         const collection = await dbService.getCollection('yacht')
         const yachts = await collection.find().toArray()
+        console.log(`yachts`, yachts)
         return yachts
             // var yachts = await collection.aggregate([
             //     {

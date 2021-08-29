@@ -16,7 +16,7 @@ module.exports = {
 
 async function query(filterBy = {}) {
     try { 
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         var users = await collection.find({}).toArray()
         users = users.map(user => {
             delete user.password
@@ -32,7 +32,7 @@ async function query(filterBy = {}) {
 
 async function getById(userId) {
     try {
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         const user = await collection.findOne({ '_id': ObjectId(userId) })
         delete user.password
         return user
@@ -45,7 +45,7 @@ async function getById(userId) {
 }
 async function getByUsername(username) {
     try {
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         const user = await collection.findOne({ username })
 
         return user
@@ -57,7 +57,7 @@ async function getByUsername(username) {
 
 async function remove(userId) {
     try {
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         await collection.deleteOne({ '_id': ObjectId(userId) })
     } catch (err) {
         logger.error(`cannot remove user ${userId}`, err)
@@ -75,7 +75,7 @@ async function update(user) {
             imgUrl:user.imgUrl,
             messages:user.messages
         }
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         await collection.updateOne({ '_id': userToSave._id }, { $set: userToSave })
         return userToSave;
     } catch (err) {
@@ -97,7 +97,7 @@ async function add(user) {
                 msgs:[]
             }
         }
-        const collection = await dbService.getCollection('user')
+        const collection = await dbService.getCollection('users')
         await collection.insertOne(userToAdd)
         return userToAdd
     } catch (err) {
