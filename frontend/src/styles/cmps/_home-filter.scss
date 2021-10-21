@@ -1,5 +1,5 @@
 .hero .wrapper {
-    top: -292px;
+    top: -265px;
 }
 
 .wrapper {
@@ -145,7 +145,7 @@
     margin-left: 11px;
 }
 
-@media (max-width:440px) {
+@media (max-width:620px) {
     .filter-container {
         // background-color: blue;
         // width: fit-content;
@@ -162,7 +162,7 @@
         font-size: 1.5rem !important;
     }
     .filter-container .wrapper .box .title {
-        font-size: 1.8rem !important;
+        font-size: 1.3rem !important;
     }
     .filter-container .wrapper .box:nth-child(2) {
         display: none;

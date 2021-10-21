@@ -134,7 +134,7 @@ div.random-search {
         color: seashell;
     }
     .rs-inner {
-        color: rgb(54, 54, 54);;
+        color: rgb(54, 54, 54);
         margin: 0 auto;
         background-color: #ffc760;
         border: none;
@@ -156,54 +156,73 @@ div.random-search {
     position: relative;
     overflow: hidden;
     border-radius: 0.375rem;
-    h2, h4 {
+    h2,
+    h4 {
         margin: unset;
     }
-   > img {  
-    width: 100%;
-    margin-bottom: 15px;
-    margin-top: 10px;
-   }
-   .content {
-       position: absolute;
-       top: 50%;
-       transform: translateY(-50%);
-       left: 7%;
-       width: 280px;
-       color: rgb(255, 255, 255);
-       > h2 {
-           font-size: 48px;
-           margin-bottom: 12px;
-           font-weight: 600;
+    > img {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        @include for-mobile-layout {
+            padding-right: 20px;
+        }
+    }
+    .content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 7%;
+        width: 280px;
+        color: rgb(255, 255, 255);
+        @include for-mobile-layout {
+            left: 2%;
+            width: 240px;
+            top: 45%;
+        }
+        > h2 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            @include for-mobile-layout {
+                font-size: 20px;
+            }
         }
         > h4 {
-           font-weight: 400;
-           font-size: 18px;
-           margin-bottom: 40px;
-       }
-       > button {
-           //clean
-        background: none;
-        color: inherit;
-        border: none;
-        padding: 0;
-        font: inherit;
-        cursor: pointer;
-        outline: inherit;
-
-        border-radius: 8px;
-        cursor: pointer;
-        padding: 14px 24px;
-        background-color: rgb(255, 255, 255);
-        color: rgb(72, 72, 72);
-        font-size: 16px;
-        font-weight: 600;
-
-        &:hover {
-            filter: brightness(0.9);
+            font-weight: 400;
+            font-size: 18px;
+            margin-bottom: 40px;
+            @include for-mobile-layout {
+                margin-bottom: 20px;
+                font-size: 12px;
+            }
         }
-       }
-   }
+        > button {
+            //clean
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 14px 24px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(72, 72, 72);
+            font-size: 16px;
+            font-weight: 600;
+            @include for-mobile-layout {
+                padding: 10px 20px;
+                font-size: 10px;
+            }
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }
 }
 
 .yacht {
@@ -245,6 +264,23 @@ div.random-search {
         // text-align: left;
     }
     //  :last-child {}
+
+    @include for-mobile-layout {
+        //    grid-column: 2 / span 1;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        // grid-template-rows: repeat(auto-fill, minmax(400px, 1fr));
+        overflow:initial;
+        height: 100%;
+        > * {
+            grid-column: 1;
+            min-height: 200px;
+        }
+        // > :nth-child(1){
+        //     border: 5px solid red;
+        //     min-height: 200px;
+        //     grid-column: 1
+        // }
+    }
 }
 
 .gallery-item {
@@ -263,6 +299,7 @@ div.random-search {
     &.first {
         .txt {
             text-align: left;
+      
         }
     }
 }
@@ -325,6 +362,16 @@ div.random-search {
             margin: 0 0 10px 0;
         }
     }
+    @include for-mobile-layout {
+         >:nth-child(1){
+
+            //  border: 5px solid blue;
+             min-height: 200px;
+            //  grid-column: 1
+         }      
+   
+}
+
 }
 
 .loc-img {
@@ -461,7 +508,6 @@ div.random-search {
 }
 
 .hero {
-   
     height: 94vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.123), rgba(0, 0, 0, 0.178)), url("~@/assets/imgs/new-pic.jpeg");
@@ -469,12 +515,19 @@ div.random-search {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    @include for-mobile-layout {
+        background-position: 88%;
+    }
 }
-.zayin{
+.openingTitle {
     font-size: 3em;
     font-family: OtomanopeeOne;
-    color: #FCE38A;
+    color: #fce38a;
     text-align: center;
+    @include for-mobile-layout {
+        height: 60px;
+        margin-top: 81px;
+    }
 }
 
 .filter-container {
@@ -768,7 +821,7 @@ div.random-search {
     width: 100%;
     margin: 8px 0;
     background-color: rgb(149, 210, 212);
-    height:400px;
+    height: 400px;
     h2 {
         color: cornsilk;
         font-size: 36px;
@@ -783,4 +836,6 @@ div.random-search {
     height: 100%;
 }
 
-.sailor-backdrop{ height: 100%; }
+.sailor-backdrop {
+    height: 100%;
+}

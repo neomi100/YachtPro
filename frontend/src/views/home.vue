@@ -1,7 +1,7 @@
 <template>
   <section class="home main-layout-home" v-if="yachts">
     <section class="hero full main-layout">
-      <h2 class="zayin">BOOK YOUR NEXT DREAM</h2> 
+      <span class="openingTitle">BOOK YOUR NEXT DREAM</span> 
       <div
         class="filter-container flex justify-center align-center scroll-serarch top-part"
       >

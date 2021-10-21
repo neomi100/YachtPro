@@ -17,8 +17,9 @@ export const yachtService = {
 
 
 
-function query() {
-    return httpService.get(`yacht`)
+async function query() {
+    const yachts=await  httpService.get(`yacht`)
+return yachts
 }
 
 

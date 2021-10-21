@@ -1,6 +1,6 @@
 <template>
   <section  class="layout-yacht" >
-    <div class="title">{{title}}</div>
+    <!-- <div class="title">{{title}}</div> -->
     <yachtFilter @filterede="filterBy" />
     <yachtList :yachts="yachts" />
   </section>

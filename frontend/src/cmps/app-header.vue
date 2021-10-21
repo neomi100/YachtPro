@@ -1,6 +1,6 @@
 <template>
-  <header :class="`full  header-container ${layoutClass} ${positionClass} `">
-    <div :class="`nav-container `">
+  <header :class="`full header-container ${layoutClass} ${positionClass} `">
+    <div :class="`nav-container`">
       <el-menu
         class="el-menu-demo menu-flex"
         style="border: none; background-color: unset"
@@ -11,7 +11,7 @@
             <svg
               xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns="http://www.w3.org/2000/svg"
-              class="css-ze2te4 css-qd6ojx"
+              class="css-svg"
               viewBox="0 9 100 95.2493065661926"
               width="59"
               height="80"
@@ -95,7 +95,7 @@
             <svg
               xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns="http://www.w3.org/2000/svg"
-              class="css-ze2te4 css-qd6ojx"
+              class="css-svg"
               viewBox="-18 -18 100 48"
               width="100"
               height="50"

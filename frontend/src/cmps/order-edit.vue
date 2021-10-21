@@ -113,7 +113,8 @@ export default {
       this.orderSettings.guest = value;
     },
     
-    async sendOrderRequest() {
+    async sendOrderRequest() { 
+      console.log(this.orderSettings, 'logg');
       try {
         await this.$store.dispatch({
           type: "setPendingOrder",

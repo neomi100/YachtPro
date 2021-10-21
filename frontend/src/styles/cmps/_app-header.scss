@@ -37,6 +37,9 @@
 }
 .fixed{
     position: fixed;
+    @include for-mobile-layout{
+        padding-right: 20px;
+    }
 }
 .stickyPos{
     position: sticky;
@@ -57,7 +60,7 @@ background-color: transparent !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right:20px;
+    // padding-right:20px;
     .el-menu-item {
         padding-left: unset;
         border-bottom: unset;
@@ -163,7 +166,7 @@ background-color: transparent !important;
         grid-template-columns: 15px 1fr 15px;
     }
     .nav-container {
-        padding: unset;
+        // padding: unset;
         .explore-nav {
             font-size: 1.2rem;
         }

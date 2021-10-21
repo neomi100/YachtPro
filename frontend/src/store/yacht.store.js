@@ -31,8 +31,7 @@ export const yachtStore = {
             yachts = yachts.filter((yacht) => yacht.price > price)
 
             switch (true) {
-                case 'All' || '':
-                    break;
+                
                 case (guests >= 1 && guests <= 5):
 
                     yachts = yachts.filter((yacht) => yacht.size === 'small');
